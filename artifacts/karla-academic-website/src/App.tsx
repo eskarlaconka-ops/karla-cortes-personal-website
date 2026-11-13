@@ -63,7 +63,7 @@ function App() {
           <div className="hero-portrait-wrap">
             <div className="portrait-wash" aria-hidden="true" />
             <figure className="portrait-frame">
-              <img src="/images/karla-cortes-profile.jpg" alt="Karla Y. Cortés Vázquez in her graduation stole, standing beneath flowering branches" data-testid="img-profile" />
+              <img src={`${import.meta.env.BASE_URL}images/karla-cortes-profile.jpg`} alt="Karla Y. Cortés Vázquez in her graduation stole, standing beneath flowering branches" data-testid="img-profile" />
               <figcaption><span className="caption-mark" aria-hidden="true" /> East Lansing, Michigan <span className="caption-dot">/</span> MSU</figcaption>
             </figure>
             <div className="portrait-stamp" aria-hidden="true"><span>PEOPLE</span><span>IN</span><span>CONTEXT</span></div>
@@ -116,6 +116,14 @@ function App() {
                 <BookOpen size={18} strokeWidth={1.5} />
                 <p><strong>The question underneath:</strong> How might communication within families shape the support students experience as they navigate the transition home?</p>
               </div>
+              <a
+                className="inline-link"
+                href={`${import.meta.env.BASE_URL}downloads/featured-study-proposal.pdf`}
+                download
+                data-testid="link-featured-study-pdf"
+              >
+                Read the thesis proposal draft (PDF) <ArrowUpRight size={15} />
+              </a>
               <span className="work-note mono" data-testid="text-thesis-status">A developing inquiry · no findings reported</span>
             </div>
           </div>
@@ -183,6 +191,15 @@ function App() {
             <div className="background-intro">
               <h2 className="serif">A path shaped<br />by <em>curiosity.</em></h2>
               <p>Each chapter has offered another way to think about people, culture, and the ties that connect them.</p>
+              <a
+                id="cv"
+                className="inline-link"
+                href={`${import.meta.env.BASE_URL}downloads/karla-cortes-cv.pdf`}
+                download
+                data-testid="link-download-cv"
+              >
+                Download my CV (PDF) <ArrowUpRight size={15} />
+              </a>
             </div>
             <div className="timeline">
               <article className="timeline-item" data-testid="card-education-masters">
