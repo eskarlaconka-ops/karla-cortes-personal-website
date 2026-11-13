@@ -73,15 +73,13 @@ function App() {
 
         <section className="intro-band" id="about">
           <div className="section-index mono">01 <span>—</span> A LITTLE CONTEXT</div>
-          <div className="intro-grid">
-            <h2 className="serif">Communication is<br />never just <em>words.</em></h2>
-            <div className="intro-text">
-              <p className="lead">It’s the way we make meaning together: at home, across cultures, and in the moments when life asks us to begin again.</p>
-              <p>My interests bring family communication into conversation with cross-cultural and intercultural communication, Latin American studies, and student wellbeing. I’m drawn to questions that make room for the full context of a person’s life—not just the moment they’re in.</p>
-              <a className="inline-link" href="https://clstudies.msu.edu/directory/directory-cortes.html" target="_blank" rel="noreferrer" data-testid="link-msu-directory-about">
-                Meet me through MSU Chicano/Latino Studies <ArrowUpRight size={15} />
-              </a>
-            </div>
+          <div className="about-copy">
+            <p className="about-copy-lead" data-testid="text-about-introduction">
+              Communication is the way we make meaning together: at home, across cultures, and in the moments when life asks us to begin again.
+            </p>
+            <p className="about-copy-detail" data-testid="text-about-interests">
+              My interests bring family communication into conversation with cross-cultural and intercultural communication, Latin American studies, and student wellbeing. I’m drawn to questions that make room for the full context of a person’s life—not just the moment they’re in.
+            </p>
           </div>
           <div className="topic-ribbon" aria-label="Research interests">
             <span>Family communication</span><i />
