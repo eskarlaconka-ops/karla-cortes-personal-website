@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Karla Cortés — Academic Profile"
+description = "A personal academic website introducing Karla Cortés, her communication research, education, experience, and professional links."
+version = "1.0.0"
+id = "artifacts/karla-academic-website"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20442
+
+[services.development]
+run = "pnpm --filter @workspace/karla-academic-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/karla-academic-website", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/karla-academic-website/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20442"
+BASE_PATH = "/"
